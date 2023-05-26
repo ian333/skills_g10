@@ -13,7 +13,7 @@ app = FastAPI()
 
 @app.get("/",status_code=status.HTTP_200_OK)
 async def root():
-    return {"message": "Hello daniel y henry"}
+    return {"message": "Hola chicos este es el final de sus clases con Ian Suerte G10!!"}
 
 @app.post("/predict",status_code=status.HTTP_200_OK)
 async def predict_flower(data:IrisSchema):
