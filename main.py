@@ -98,6 +98,12 @@ async def predict_flower_lr(data:IrisSchema):
 
 @app.post("/uploadfile/",status_code=status.HTTP_200_OK)
 async def create_upload_file(file:UploadFile=File(...)):
+    """
+    Este es un endpoint para subir una imagen y que el algortimo nos diga si es un numero 
+    
+    """
+
+
     ModPredMNISTSVC=pickle.load(open("Modelos/ModPredMNISTSVC.pkl",'rb'))
 
     image = Image.open(file.file)
